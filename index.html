@@ -1,36 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Citation App</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Funnel+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Funnel+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <h1>Mes citations</h1>
     <h2>Gestionnaire de citations en ligne</h2>
-    <h3 id="count"></h3>
-    <hr>
+    <h3 id="count">0 Citations</h3>
+    <hr />
     <form action="#" id="formulaire">
-        <label id="getTitre"> Votre citation
-        <input type="text" id="titre">
-        </label>
-        <label id="getAuteur"> L'auteur / Autrice
-        <input type="text" id="auteur">
-        </label>
-        <button onclick='addQuote();' id="btn">Valider</button>
+      <label id="getTitre">
+        Votre citation
+        <input type="text" id="titre" />
+      </label>
+      <label id="getAuteur">
+        L'auteur / Autrice
+        <input type="text" id="auteur" />
+      </label>
+      <button id="btn">Valider</button>
     </form>
 
     <div id="quote-list">
-        <div class="quote">
-            <p class="text-ajouter">Citation : On ne naît pas femme, on le devient</p>
-            <p class="autor">Auteur/Autrice : Simone de Beauvoir</p>
-        </div>
+      <div class="quote">
+        <p class="text">Citation : On ne naît pas femme, on le devient</p>
+        <p class="author">Auteur/Autrice : Simone de Beauvoir</p>
+      </div>
     </div>
 
     <script src="script.js"></script>
-</body>
+  </body>
 </html>

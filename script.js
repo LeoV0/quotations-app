@@ -1,27 +1,32 @@
 let quoteCount = 0;
+let buttonValider = document.querySelector("#btn");
 
-function addQuote(){
-    let inputAuteur = document.querySelector('#auteur').value;
-    let inputCitation = document.querySelector('#titre').value;
-    const compteur = document.querySelector("#count");
+function addQuote() {
+  let inputAuteur = document.querySelector("#auteur").value;
+  let inputCitation = document.querySelector("#titre").value;
+  const compteur = document.querySelector("#count");
 
-    const paragrapheText = document.createElement('p');
-    paragrapheText.classList.add('text');
+  const paragrapheText = document.createElement("p");
+  paragrapheText.classList.add("text");
 
-    const paragrapheAuteur = document.createElement('p');
-    paragrapheAuteur.classList.add('author');
+  const paragrapheAuteur = document.createElement("p");
+  paragrapheAuteur.classList.add("author");
 
-    paragrapheText.innerHTML =`Citation : ${inputCitation}`;
-    paragrapheAuteur.innerHTML = `Auteur/Autrice : ${inputAuteur}`;
-   
-    const div = document.createElement('div');
-    div.classList.add('quote');
-    div.appendChild(paragrapheText);
-    div.appendChild(paragrapheAuteur);
+  paragrapheText.innerHTML = `Citation : ${inputCitation}`;
+  paragrapheAuteur.innerHTML = `Auteur/Autrice : ${inputAuteur}`;
 
-    const getQuoteList = document.querySelector('#quote-list');
-    getQuoteList.appendChild(div)
-    quoteCount += 1
+  const div = document.createElement("div");
+  div.classList.add("quote");
+  div.appendChild(paragrapheText);
+  div.appendChild(paragrapheAuteur);
 
-    compteur.textContent = `${quoteCount} Citations`;
+  const getQuoteList = document.querySelector("#quote-list");
+  getQuoteList.appendChild(div);
+  quoteCount += 1;
+
+  compteur.textContent = `${quoteCount} Citations`;
 }
+
+buttonValider.addEventListener("click", () => {
+  addQuote();
+});
